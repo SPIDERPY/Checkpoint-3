@@ -101,6 +101,43 @@ Pour vérifier l'espace disponible dans le groupe de volumes, utilisez la comman
 
 Ensemble, ces composants permettent une gestion centralisée et efficace des sauvegardes sur le serveur.
 
+# Partie 5 : Filtrage et analyse réseau
+
+### Q.2.5.1 : Quelles sont actuellement les règles appliquées sur Netfilter ?
+Pour afficher les règles actuellement appliquées sur Netfilter, exécutez la commande suivante :
+   ```bash
+   sudo iptables -L
+   ```
+Cette commande liste toutes les règles existantes dans les chaînes d'input, output et forward.
+### Q.2.5.2 : Quels types de communications sont autorisées ?
+Les types de communications autorisées peuvent être déduits des règles affichées par la commande iptables -L. Par exemple :
+
+Les règles avec la cible ACCEPT indiquent les communications autorisées.
+
+Vérifiez les ports, protocoles et adresses IP spécifiés dans ces règles.
+
+### Q.2.5.3 : Quels types sont interdits ?
+Les types de communications interdites sont également visibles dans les règles affichées par iptables -L. Par exemple :
+
+Les règles avec la cible DROP ou REJECT indiquent les communications interdites.
+
+Analysez les ports, protocoles ou adresses IP bloqués par ces règles.
+
+### Q.2.5.4 : Sur nftables, ajouter les règles nécessaires pour autoriser Bareos à communiquer avec les clients Bareos
+Bareos utilise les ports TCP 9101 à 9103 pour ses communications. Pour ajouter ces règles sur nftables :
+
+1. Ajouter les règles nécessaires :
+   ```bash
+   sudo nft add rule inet filter input tcp dport 9101-9103 accept
+   ```
+2. Sauvegarder la configuration nftables pour qu’elle soit persistante après un redémarrage :
+   ```bash
+   sudo nft list ruleset > /etc/nftables.conf
+   ```
+3. Redémarrer nftables pour appliquer les règles :
+   ```bash
+   sudo systemctl restart nftables
+   ```
 
 
 
