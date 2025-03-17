@@ -83,6 +83,24 @@ Pour vérifier l'espace disponible dans le groupe de volumes, utilisez la comman
    sudo vgdisplay
 ```
 
+## Partie 4 : Sauvegardes
+
+### Q.2.4.1 : Expliquer succinctement les rôles respectifs des 3 composants Bareos installés sur la VM
+1. **bareos-dir (Director)** :
+   - C'est le composant principal qui gère la planification, l'organisation et le suivi des sauvegardes.
+   - Il coordonne les tâches entre les autres composants (bareos-sd et bareos-fd).
+   - Il supervise les catalogues de sauvegarde.
+
+2. **bareos-sd (Storage Daemon)** :
+   - Ce composant est responsable du stockage des données sauvegardées.
+   - Il écrit les données sur les supports de stockage (disques, bandes, etc.) spécifiés dans la configuration.
+
+3. **bareos-fd (File Daemon)** :
+   - Ce composant s'exécute sur les machines clientes ou sur le serveur pour accéder aux fichiers à sauvegarder.
+   - Il communique avec le Director pour envoyer les fichiers vers le Storage Daemon.
+
+Ensemble, ces composants permettent une gestion centralisée et efficace des sauvegardes sur le serveur.
+
 
 
 
