@@ -13,3 +13,10 @@ sudo adduser wilder
 - Ajouter l'utilisateur à un groupe spécifique si nécessaire.
 - Configurer une clé SSH pour sécuriser les connexions.
 
+## Partie 2 : Configuration de SSH
+
+### Q.2.2.1 : Désactiver complètement l'accès root
+Pour désactiver l'accès root à distance, modifier le fichier `/etc/ssh/sshd_config` et définir la directive suivante :
+```bash
+PermitRootLogin no
+```
