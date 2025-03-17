@@ -146,7 +146,7 @@ Pour lister les 10 derniers échecs de connexion, utilisez la commande suivante 
    ```bash
    sudo grep "Failed password" /var/log/auth.log | tail -n 10
    ```
-cette commande permet d'extraire les tentatives échouées dans les logs d'authentification.    
+Cette commande permet d'extraire les tentatives échouées dans les logs d'authentification.    
 Elle affiche :    
 La date et l'heure de la tentative : Visible au début de chaque ligne du log.    
 L'adresse IP de la machine ayant fait la tentative : Généralement indiquée après le texte "from".    
