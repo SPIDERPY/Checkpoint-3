@@ -32,5 +32,10 @@ sudo systemctl restart sshd
    ```
 2. Copier la clé publique générée sur le serveur SRVLX01 pour votre compte :
   ```bash
-  ssh-copy-id mon_compte@SRVLX01
+  ssh-copy-id wilder@SRVLX01
   ```
+3. Désactiver l'authentification par mot de passe sur le serveur. Modifier /etc/ssh/sshd_config pour inclure :
+```bash
+   PasswordAuthentication no
+```
+
