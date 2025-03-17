@@ -5,4 +5,4 @@
 ### Q.2.1.1 : Création d’un compte utilisateur personnel
 Pour créer un compte utilisateur :
 ```bash
-sudo adduser mon_compte
+sudo adduser wilder
