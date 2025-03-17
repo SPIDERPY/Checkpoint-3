@@ -24,3 +24,13 @@ Ensuite, redémarrer le service SSH :
 ```bash
 sudo systemctl restart sshd
 ```
+### Q.2.2.3 : Authentification par clé SSH
+
+1. Générer une paire de clés SSH sur votre machine locale :
+   ```bash
+   ssh-keygen
+   ```
+2. Copier la clé publique générée sur le serveur SRVLX01 pour votre compte :
+  ```bash
+  ssh-copy-id mon_compte@SRVLX01
+  ```
