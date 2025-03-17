@@ -20,3 +20,7 @@ Pour désactiver l'accès root à distance, modifier le fichier `/etc/ssh/sshd_c
 ```bash
 PermitRootLogin no
 ```
+Ensuite, redémarrer le service SSH :
+```bash
+sudo systemctl restart sshd
+```
