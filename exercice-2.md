@@ -42,7 +42,7 @@ sudo systemctl restart sshd
    sudo systemctl restart sshd
    ```
    
-# Partie 3 : Analyse du stockage
+## Partie 3 : Analyse du stockage
 
 ### Q.2.3.1 : Quels sont les systèmes de fichiers actuellement montés ?
 Pour afficher les systèmes de fichiers montés, utilisez la commande suivante :
@@ -101,7 +101,7 @@ Pour vérifier l'espace disponible dans le groupe de volumes, utilisez la comman
 
 Ensemble, ces composants permettent une gestion centralisée et efficace des sauvegardes sur le serveur.
 
-# Partie 5 : Filtrage et analyse réseau
+## Partie 5 : Filtrage et analyse réseau
 
 ### Q.2.5.1 : Quelles sont actuellement les règles appliquées sur Netfilter ?
 Pour afficher les règles actuellement appliquées sur Netfilter, exécutez la commande suivante :
@@ -139,7 +139,7 @@ Bareos utilise les ports TCP 9101 à 9103 pour ses communications. Pour ajouter 
    sudo systemctl restart nftables
    ```
 
-# Partie 6 : Analyse de logs
+## Partie 6 : Analyse de logs
 
 ### Q.2.6.1 : Lister les 10 derniers échecs de connexion ayant eu lieu sur le serveur
 Pour lister les 10 derniers échecs de connexion, utilisez la commande suivante :
