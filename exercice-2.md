@@ -154,9 +154,9 @@ Pour analyser davantage, vous pouvez utiliser awk pour formater directement la s
    ```bash
    sudo grep "Failed password" /var/log/auth.log | tail -n 10 | awk '{print $1, $2, $3, $11}'
    ```
-Les éléments importants extraits incluront :   
-La date (ex. Mar 17 10:25:43)
-L'adresse IP (ex. 192.168.1.100)
+Les éléments importants extraits incluront :
+- La date (ex. Mar 17 10:25:43)
+- L'adresse IP (ex. 192.168.1.100)
 
 
 
