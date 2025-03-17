@@ -6,6 +6,7 @@
 Pour créer un compte utilisateur :
 ```bash
 sudo adduser wilder
+```
 ### Q.2.1.2 : Préconisations pour ce compte
 - Utiliser un mot de passe complexe.
 - Limiter les permissions aux stricts besoins (ne pas donner les droits root).
