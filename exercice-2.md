@@ -139,6 +139,21 @@ Bareos utilise les ports TCP 9101 à 9103 pour ses communications. Pour ajouter 
    sudo systemctl restart nftables
    ```
 
+# Partie 6 : Analyse de logs
+
+### Q.2.6.1 : Lister les 10 derniers échecs de connexion ayant eu lieu sur le serveur
+Pour lister les 10 derniers échecs de connexion, utilisez la commande suivante :
+   ```bash
+   sudo grep "Failed password" /var/log/auth.log | tail -n 10
+   ```
+cette commande permet d'extraire les tentatives échouées dans les logs d'authentification. Elle affiche :
+La date et l'heure de la tentative : Visible au début de chaque ligne du log.
+L'adresse IP de la machine ayant fait la tentative : Généralement indiquée après le texte "from".
+Pour analyser davantage, vous pouvez utiliser awk pour formater directement la sortie. Par exemple :
+   ```bash
+   sudo grep "Failed password" /var/log/auth.log | tail -n 10 | awk '{print $1, $2, $3, $11}'
+   ```
+
 
 
 
